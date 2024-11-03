@@ -1,0 +1,73 @@
+.footer {
+    padding: 30px 0 10px;
+    background-color: #eaeaea;
+    .box {
+        .brand-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .title {
+            font-weight: bold;
+            margin: 20px 0 20px;
+        }
+        a {
+            color: $textColor1;
+        }
+        .download {
+
+            margin: 30px 4px 4px;
+            width: 120px;
+            height: 40px;
+            padding-top: 0;
+            line-height: 1;
+            border-radius: 7px;
+            position: relative;
+            i {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            font-size: 16px;
+            }
+            span {
+                font-size: 10px;
+                bottom: 10px;
+                margin-top: -14px;
+                margin-left: 10px;
+            }
+            strong {
+                font-size: 15px;
+                margin-bottom: 8px;
+                margin-left: 12px;
+            }
+        }
+        .social {
+            margin-top: 15px;
+            li {
+                float: left;
+                margin-right: 5px;
+                background-color: $textColor1;
+                border-radius: 50px;
+                width: 30px !important;
+                height: 30px !important;
+                text-align: center;
+                padding-top: 4px;
+                a {
+                    i {
+                        color: #fff;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        margin-top: 70px !important;
+        padding-top: 30px;
+        text-align: center;
+        color: $textColor2;
+        font-size: 16px;
+        width: 100%;
+        display: block;
+    }
+}

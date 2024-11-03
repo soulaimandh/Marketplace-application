@@ -1,0 +1,320 @@
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:checked + .slider::before {
+  left: -10px !important;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.wait-loading {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 30px;
+}
+.wait-loading .dots {
+  margin: 15px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: hide-show 1.5s ease-in-out infinite;
+}
+.wait-loading .dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+.wait-loading .dots span:first-child {
+  background-color: red;
+}
+.wait-loading .dots span:nth-child(2) {
+  background-color: orange;
+}
+.wait-loading .dots span:nth-child(3) {
+  background-color: green;
+}
+.wait-loading .dots span:nth-child(4) {
+  background-color: blue;
+}
+@keyframes hide-show {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.wait-loading .wait {
+  text-align: center;
+  width: 100%;
+}
+
+.content-area {
+  position: absolute;
+  top: 0;
+  left: 270px;
+  width: calc(100% - 270px);
+  transition: 0.3s ease-in-out;
+  padding: 10px 0;
+  height: calc(100vh - 127px);
+  overflow-y: scroll;
+}
+@media (max-width: 767px) {
+  .content-area {
+    left: 0;
+    width: 100%;
+  }
+}
+.content-area.no-sidebar {
+  left: 0;
+  width: 100%;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .content-area.no-sidebar {
+    display: none;
+  }
+}
+
+.dashboard-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 1050px;
+  z-index: 99;
+}
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 110px;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  z-index: 9999;
+}
+.sidebar.fixed {
+  top: 57px;
+}
+.sidebar.fixed .sidebar-body {
+  height: calc(100vh - 167px);
+}
+@media (max-width: 767px) {
+  .sidebar {
+    top: 57px;
+    left: -250px;
+  }
+  .sidebar .sidebar-body {
+    height: calc(100vh - 167px) !important;
+  }
+  .sidebar.show {
+    left: 0 !important;
+  }
+  .sidebar.show .sidebar-toggler {
+    right: -25px !important;
+  }
+}
+.sidebar.show {
+  left: -250px;
+}
+.sidebar.show .sidebar-toggler {
+  right: -25px !important;
+}
+.sidebar .sidebar-body {
+  height: calc(100vh - 220px);
+  overflow-y: scroll;
+  /* Track */
+  /* Handle */
+}
+.sidebar .sidebar-body::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+.sidebar .sidebar-body::-webkit-scrollbar-track {
+  background-color: #ccc;
+  padding: 2px;
+  border-radius: 5px;
+}
+.sidebar .sidebar-body::-webkit-scrollbar-thumb {
+  background-color: #0073ff;
+  border-radius: 5px;
+  opacity: 1;
+}
+.sidebar .sidebar-wrapper {
+  margin: 20px 0;
+  border-radius: 10px;
+  color: #555 !important;
+}
+.sidebar .sidebar-wrapper .sidebar-menu {
+  background-color: #fff;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.sidebar .sidebar-wrapper .sidebar-menu .menu-item {
+  margin-bottom: 12px;
+  position: relative;
+}
+.sidebar .sidebar-wrapper .sidebar-menu .menu-item.active .list-items {
+  display: block;
+}
+.sidebar .sidebar-wrapper .sidebar-menu .menu-item .open-close-icon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #555;
+}
+.sidebar .sidebar-wrapper .sidebar-menu .menu-item .open-close-icon .open {
+  display: none;
+  transition: 0.2s ease-in-out;
+}
+.sidebar .sidebar-wrapper .sidebar-menu .menu-item a,
+.sidebar .sidebar-wrapper .sidebar-menu .menu-item .title {
+  display: flex;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555 !important;
+  cursor: pointer;
+  width: 100%;
+}
+.sidebar .sidebar-wrapper .sidebar-menu .menu-item .icon {
+  padding: 0 10px;
+}
+.sidebar .sidebar-wrapper .sidebar-menu .menu-item .list-items {
+  padding: 0 0 5px 35px;
+  display: none;
+}
+.sidebar .sidebar-wrapper .sidebar-menu .menu-item .list-items .list-item {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.sidebar .sidebar-wrapper .stats-info {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.sidebar .sidebar-wrapper .stats-info .menu-item {
+  display: flex;
+  color: #555 !important;
+  font-size: 18px;
+}
+.sidebar .sidebar-wrapper .stats-info .icon {
+  padding: 0 10px;
+}
+.sidebar .sidebar-wrapper .stats-info .list-items {
+  padding: 5px 5px 5px 20px;
+}
+.sidebar .sidebar-wrapper .sidebar-hero {
+  display: flex;
+  background-color: #fff;
+  padding: 30px 10px 10px;
+  position: relative;
+  border-top-left-radius: 10px;
+}
+.sidebar .sidebar-wrapper .sidebar-hero .logo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+}
+.sidebar .sidebar-wrapper .sidebar-hero .logo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.sidebar .sidebar-wrapper .sidebar-hero .name {
+  font-weight: bold;
+  font-size: 15px;
+}
+.sidebar .sidebar-wrapper .sidebar-hero .regestered-date {
+  font-size: 12px;
+}
+.sidebar .sidebar-wrapper .sidebar-hero .sidebar-toggler {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #fff;
+  height: 20px;
+  font-size: 14px;
+  width: 25px;
+  text-align: center;
+  line-height: 20px;
+  color: #000000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 8px 1px 8px -3px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  .sidebar .sidebar-wrapper .sidebar-hero .sidebar-toggler {
+    display: block;
+  }
+}
+
+body {
+  overflow-y: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */

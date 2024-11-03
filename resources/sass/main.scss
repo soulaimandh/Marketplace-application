@@ -1,0 +1,21 @@
+// Helpers
+@import './helpers/helpers';
+
+// components
+@import './components/components';
+
+// Layouts
+@import './layouts/layouts';
+
+//visitor
+@import './pages/visitor/visitor.scss';
+
+//shop
+@import './pages/shop/shop.scss';
+
+//client
+@import './pages/client/client';
+
+
+//admin
+@import './pages/admin/admin';

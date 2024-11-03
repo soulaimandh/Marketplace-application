@@ -1,0 +1,103 @@
+.latest-products {
+    padding: 20px 0 30px;
+    position: relative;
+    text-align: center;
+    .description{
+        letter-spacing: 1.5px;
+        font-size: 26px;
+        color: #777;
+        font-weight:lighter;
+    }
+    h2{
+        margin-top: 10px;
+        font-weight: bold;
+        color: $textColor1;
+        font-size: 26px;
+    }
+    .tag{
+        width: fit-content;
+        background-color: $secondColor;
+        color: #FFF;
+        font-size: 18px;
+        padding: 8px 8px 23px;
+        margin-bottom: -15px;
+        border-radius: 8px;
+
+    }
+
+.latest-products-slider{
+    position: relative;
+    background-color: #dcdada;
+    padding: 5px;
+    border-radius: 10px;
+    .swiper-button-prev,
+    .swiper-button-next{
+        &::after{
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+    .swiper-btn{
+        overflow: hidden;
+        border-radius: 50%;
+        padding: 10px;
+        height: 30px;
+        width: 30px;
+        background-color: #eee;
+        color: $textColor2;
+        font-size: 10px;
+    }
+}
+
+    .swiper-slide {
+       width: 200px;
+       height: 270px;
+       margin: 5px;
+       border-radius: 10px;
+       overflow: hidden;
+       img{
+        width: 200px;
+        height: 270px;
+        z-index: 1;
+       }
+       .overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        color: #FFF;
+        background-color: rgba(0, 0, 0, 0.3);
+        background-size: cover;
+       }
+       .price{
+        position: absolute;
+        top: 20px;
+        left: 8px;
+        font-size: 20px;
+        font-weight: bold;
+        z-index: 3;
+        color: #FFF;
+       }
+       .title{
+        position: absolute;
+        bottom: 40px;
+        left: 8px;
+        font-size: 18px;
+        z-index: 3;
+        color: #FFF;
+       }
+       .city{
+        position: absolute;
+        bottom: 5px;
+        left: 12px;
+        font-size: 20px;
+        font-weight: bold;
+        z-index: 3;
+        color: #FFF;
+       }
+    }
+}

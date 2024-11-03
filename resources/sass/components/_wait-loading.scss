@@ -1,0 +1,44 @@
+.wait-loading {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 30px;
+    .dots {
+        margin: 15px;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        animation: hide-show 1.5s ease-in-out infinite ;
+        span {
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            margin: 0 5px;
+            &:first-child {
+                background-color: red;
+            }
+            &:nth-child(2) {
+                background-color: orange;
+            }
+            &:nth-child(3) {
+                background-color: green;
+            }
+            &:nth-child(4) {
+                background-color: blue;
+            }
+        }
+
+        @keyframes hide-show {
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+    .wait {
+        text-align: center;
+        width: 100%;
+    }
+}

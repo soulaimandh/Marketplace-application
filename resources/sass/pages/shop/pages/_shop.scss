@@ -1,0 +1,330 @@
+.shop {
+    .about{
+        display: none;
+        background-color: #FFF;
+        border-radius: 10px;
+        padding: 20px;
+
+        h4{
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 20px;
+            i{
+                padding: 10px 10px 10px 0
+            }
+        }
+
+        li{
+            list-style: none;
+        }
+        .address{
+            a{
+                border: 1px solid $mainColor;
+                color: $mainColor;
+                border-radius: 15px;
+                padding: 0 5px;
+            }
+        }
+        .categories{
+            li{
+                padding: 8px 20px;
+                color: $textColor1;
+                border-radius: 8px;
+                background-color: #ddd;
+                margin: 10px;
+                float: left;
+                a{
+                    color: $textColor1;
+                }
+            }
+        }
+        .contacts{
+            overflow: hidden;
+            ul{
+                li{
+                    float: left;
+                    margin: 10px;
+                    background-color:#ddd;
+                    color: $textColor1;
+                    text-align: center;
+                    border-radius: 10px;
+                    font-size: 10px;
+                    width: 60px;
+                    height: 75px;
+                    padding-top: 15px;
+                    i{
+                        display: block;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                    a{
+                        color: $textColor1;
+                    }
+                }
+            }
+        }
+
+        .working-dates{
+            clear: both;
+        }
+    }
+    .shop-hero {
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        min-height: 320px;
+        .cover {
+            width: 100%;
+            min-height: 320px;
+        }
+
+        .stats {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            display: flex;
+            font-size: 13px;
+
+            .stat {
+                color: #fff;
+                margin: 0 20px;
+                span {
+                    display: block;
+                }
+            }
+            .subscribe {
+                background-color: $mainColor;
+                color: #fff;
+                text-align: center;
+                padding: 7px 25px;
+                border-radius: 5px;
+                font-size: 15px;
+                margin: 0;
+            }
+        }
+
+        .social {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            a {
+                margin: 10px;
+                color: #888;
+                border-radius: 50px;
+                background-color: #fff;
+                text-align: center;
+                padding: 5px;
+
+                i {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        .infos {
+            display: flex;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+
+            @media (max-width: 767px) {
+                top: 100px;
+                bottom: auto;
+            }
+            .logo {
+                height: 100px;
+                width: 100px;
+                border-radius: 30px;
+                overflow: hidden;
+                margin: 10px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .info {
+                padding: 10px;
+                .name {
+                    font-weight: bold;
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+                .description {
+                    font-size: 14px;
+                    color: #fff;
+                }
+                .register-date {
+                    font-size: 14px;
+                    color: #fff;
+                    margin-bottom: 5px;
+                }
+                .phones {
+                    border-radius: 5px;
+                    color: $textColor1;
+                    background-color: $body-bg;
+                    text-align: center;
+                    padding: 2px 20px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .choose-bar {
+        background-color: #fff;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        line-height: 60px;
+
+        @media (max-width: 767px) {
+            overflow: visible;
+            height: auto;
+            text-align: center;
+            .chooses {
+                position: relative;
+                &::after {
+                    content: "";
+                    background-color: #ccc;
+                    height: 1px;
+                    width: 100%;
+                    position: absolute;
+                    top: 66px;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            .contacts{
+                text-align: center !important;
+            }
+        }
+
+        .selected {
+            color: $mainColor;
+            background-color: rgba($color: $mainColor, $alpha: 0.2);
+        }
+        .chooses {
+            margin: 0 !important;
+            padding: 0 !important;
+
+            .option {
+                line-height: 60px;
+                padding: 20px;
+                margin: 0 5px 0 0;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover,
+                &:focus {
+                    color: $mainColor;
+                    background-color: rgba($color: $mainColor, $alpha: 0.2);
+                }
+            }
+        }
+        .contacts {
+            text-transform: uppercase;
+            text-align: end;
+            a {
+                border-radius: 5px;
+                padding: 5px 10px;
+                margin-right: 10px;
+            }
+            .chat {
+                border: 2px solid $mainColor;
+                color: $mainColor;
+            }
+            .phone {
+                background-color: $mainColor;
+                color: #fff;
+                padding: 7px 20px;
+            }
+        }
+    }
+
+    .filters-container {
+        display: flex;
+        justify-content: space-between;
+
+        .shop-name {
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        .filters {
+            .form {
+                display: flex;
+                justify-content: end;
+                .reset {
+                    color: red;
+                    font-weight: bold;
+                    border: none;
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .input {
+                border-radius: 5px;
+                height: 40px;
+                position: relative;
+                background-color: #fff;
+                margin: 5px;
+                @media (max-width: 767px) {
+                    font-size: 14px;
+                }
+                &:first-child {
+                    overflow: hidden;
+                }
+                &:nth-child(2) {
+                    width: 145px;
+                }
+                &:nth-child(3) {
+                    width: 125px;
+                }
+                .title {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 8px;
+                    i {
+                        padding: 5px;
+                    }
+                }
+
+                input {
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    margin: auto 10px;
+                }
+                select {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    z-index: 2;
+                }
+                &.submit {
+                    color: #fff;
+                    background-color: $mainColor;
+                    border: none !important;
+                    text-align: left;
+                    i {
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

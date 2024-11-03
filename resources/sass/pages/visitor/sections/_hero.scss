@@ -1,0 +1,103 @@
+.hero{
+    text-align: center;
+    overflow: hidden;
+    background-color: #FFF;
+    .hero-title{
+        margin: 30px 0;
+    }
+    .hero-brand{
+        width: 100%;
+        text-align: center;
+        font-size: 62px;
+        font-weight: bold;
+        position: relative;
+        color: $textColor1;
+        span {
+            position: absolute;
+            top: 10px;
+            right: -3px;
+            padding: 0 3px;
+            font-size: 13px;
+            border-radius: 6px;
+        }
+    }
+    h2{
+        font-weight: bold;
+    }
+
+
+    .categories-section{
+        overflow: hidden;
+        .title{
+            font-weight: bold;
+            margin: 30px auto;
+        }
+        .category{
+            color: #444;
+            &.cat2{
+                color: rgb(225, 67, 67);
+                .icon{
+                    color: rgb(225, 67, 67);
+                }
+            }
+            &.cat3{
+                color: rgb(236, 169, 45);
+                .icon{
+                    color: rgb(236, 169, 45);
+                }
+            }
+            &.cat1{
+                color: rgb(43, 124, 205);
+                .icon{
+                    color: rgb(43, 124, 205);
+                }
+            }
+            &.cat4{
+                color: rgb(33, 197, 33);
+                .icon{
+                    color: rgb(33, 197, 33);
+                }
+            }
+            .all-cats{
+                margin: 15px 17px auto auto;
+            }
+            .squar{
+                width: 20px;
+                height: 20px;
+                border-radius: 2px;
+                margin-bottom: 7px;
+                margin-right: 5px;
+                
+            }
+            .sq1{
+                background-color: rgb(236, 65, 65);
+            }
+            .sq2{
+                background-color: orange
+            }
+            .sq3{
+                background-color: rgb(6, 90, 174)
+            }
+            .circle{
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                background-color: rgb(11, 149, 11);
+            }
+           .icon{
+            background-color: rgba($color: #ccc, $alpha: .5);
+            width: 100px;
+            height: 100px;
+            padding-top: 12px;
+            border-radius: 50%;
+            color: $textColor2;
+            font-size: 55px;
+            margin: auto;
+           }
+           .title{
+            text-transform: uppercase;
+            margin-top: 15px;
+           }
+        }
+    }
+}

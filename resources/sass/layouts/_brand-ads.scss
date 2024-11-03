@@ -1,0 +1,19 @@
+.brand-ads {
+    padding: 30px;
+    text-align: center;
+    color: #888;
+    background-color: #ddd;
+    .brand-name {
+        position: relative;
+        font-weight: bold;
+        width: fit-content;
+        margin: auto;
+        span {
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            font-weight: lighter;
+            font-size: 12px;
+        }
+    }
+}

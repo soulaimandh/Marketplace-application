@@ -1,0 +1,130 @@
+.post {
+    padding: 30px 0;
+    .post-header {
+       
+    }
+
+    .post-body {
+        margin-top: 30px;
+        padding: 25px;
+        border-radius: 20px;
+        background-color: #fff;
+        .category {
+            padding: 10px 0;
+            background-color: #ddd;
+            border-radius: 10px;
+            color: #333;
+            padding: 2px 7px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 26px;
+            margin: 20px 0;
+        }
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            &>div{
+                margin: 10px 0;
+            }
+            .date {
+                font-weight: bold;
+            }
+            & > div {
+                padding: 0 10px;
+            }
+            .social-share {
+                text-align: end;
+                @media (max-width:767px) {
+                    text-align: start;
+                }
+                span {
+                    font: 14px;
+                    font-weight: bold;
+                }
+                i {
+                    color: #fff;
+                    font-size: 16px;
+                    width: 35px;
+                    height: 35px;
+                }
+                a {
+                    border-radius: 50%;
+                    padding: 7px 0;
+                    text-align: center;
+                }
+                .whatsapp {
+                    background-color: rgb(71, 185, 51);
+                }
+                .facebook {
+                    background-color: rgb(23, 94, 194);
+                }
+                .link {
+                    background-color: rgb(92, 95, 91);
+                }
+            }
+        }
+
+        .img {
+            max-height: 600px;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 10px;
+
+            img {
+                width: 100%;
+                background-size: cover;
+            }
+        }
+
+        .post-content {
+            padding: 20px;
+        }
+
+        .recommended-posts {
+            h5{
+                font-weight: bold;
+                padding: 15px 5px;
+            }
+            .product {
+                background-color: #fff;
+                border-radius: 15px;
+                margin-bottom: 25px;
+                box-shadow: 0 0 10px -1px rgb(0 0 0 / 20%);
+                .header {
+                    height: 170px;
+                    width: 100%;
+                    overflow: hidden;
+                    text-align: center;
+                    img {
+                        height: 100%;
+                        width: auto;
+                        background-size: cover;
+                    }
+                }
+    
+                .body {
+                    padding: 15px;
+                    .category {
+                        padding: 2px 15px;
+                        background-color: #eee;
+                        border-radius: 5px;
+                    }
+                    .title {
+                        padding: 15px 0;
+                        font-weight: bold;
+                        font-size: 18px;
+                        display: block;
+                        color: $textColor1;
+                    }
+                    .summery {
+                        padding-bottom: 5px;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}

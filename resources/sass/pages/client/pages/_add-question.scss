@@ -1,0 +1,255 @@
+.add-question {
+    padding: 20px 0;
+    .brand-ads {
+        height: 200px;
+        margin-bottom: 20px;
+        .brand-name {
+            margin-top: 45px;
+        }
+    }
+
+    form {
+        .form-body {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            .form-contianer {
+                padding: 10px;
+                .image-input-wrapper {
+                    border: 3px dashed $mainColor;
+                    background-color: rgba($color: $mainColor, $alpha: 0.2);
+                    border-radius: 10px;
+                    position: relative;
+                    width: 250px;
+                    height: 250px;
+                    overflow: hidden;
+
+                    @media (min-width: 767px) {
+                        width: 260px;
+                        height: 260px;
+                    }
+
+                    .content {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        cursor: pointer;
+                        i {
+                            font-size: 30px;
+                            color: $mainColor;
+                        }
+                        .add {
+                            color: #fff;
+                            background-color: $mainColor;
+                            padding: 5px;
+                            margin: 5px;
+                            font-size: 12px;
+                            border-radius: 5px;
+                        }
+                    }
+                    input {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                    }
+                }
+                .images-wrapper {
+                    text-align: end;
+                    @media (max-width: 1200px) {
+                        padding-left: 50px;
+                    }
+                    @media (max-width: 991px) {
+                        padding-left: 60px;
+                    }
+                    @media (max-width: 767px) {
+                        padding-left: 70px;
+                    }
+                    @media (max-width: 575px) {
+                        padding: 20px 0 20px !important;
+                    }
+                    .images {
+                        .spiner {
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            padding-top: 50px;
+
+                            i {
+                                font-size: 50px;
+                            }
+                        }
+                        .img {
+                            width: 120px;
+                            height: 120px;
+                            border: 2px solid $mainColor;
+                            border-radius: 10px;
+                            position: relative;
+                            overflow: hidden;
+                            margin: 0 20px 20px 0;
+                            float: left;
+
+                            &.first-img {
+                                .done {
+                                    background-color: $mainColor;
+                                }
+                            }
+                            img {
+                                width: 100%;
+                            }
+                            .delete {
+                                position: absolute;
+                                top: 5px;
+                                left: 5px;
+                                padding: 0px 5px;
+                                font-size: 12px;
+                                color: #fff;
+                                font-weight: bold;
+                                border: none;
+                                cursor: pointer;
+                                background-color: rgba(
+                                    $color: #fff,
+                                    $alpha: 0.5
+                                );
+                                border-radius: 50%;
+                            }
+                            .primary-img {
+                                font-size: 12px;
+                                color: #fff;
+                                font-weight: bold;
+                                position: absolute;
+                                bottom: 5px;
+                                left: 5px;
+                            }
+                            .done {
+                                position: absolute;
+                                bottom: 5px;
+                                right: 5px;
+                                padding: 0px 4px;
+                                font-size: 12px;
+                                color: #fff;
+                                font-weight: bold;
+                                background-color: rgba(
+                                    $color: #999,
+                                    $alpha: 0.5
+                                );
+                                border-radius: 50%;
+                                &.first {
+                                    background-color: $mainColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .price {
+                position: relative;
+                .suffex {
+                    position: absolute;
+                    top: 45px;
+                    right: 10px;
+                    color: #777;
+                }
+                input {
+                    padding-right: 40px;
+                }
+            }
+            .require-field {
+                font-size: 14px;
+                span {
+                    color: red;
+                    font-weight: bold;
+
+                    i {
+                        font-size: 10px;
+                        border-radius: 50%;
+                        border: 1px solid red;
+                        padding: 1px 4px;
+                    }
+                }
+            }
+            label {
+                margin: 5px 0;
+                &.required {
+                    position: relative;
+                    &::before {
+                        content: "*";
+                        position: absolute;
+                        top: -2px;
+                        right: -8px;
+                        display: block;
+                        color: red;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .explanation {
+                color: #777;
+                font-size: 12px;
+                padding-top: 30px;
+                @media (max-width: 767px) {
+                    padding: 0 0 10px;
+                }
+            }
+
+            select {
+                color: #777;
+                option {
+                    color: $textColor1;
+                }
+            }
+            input,
+            select,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #999;
+                outline: none;
+                box-shadow: none;
+                border-radius: 5px;
+                margin-bottom: 15px;
+            }
+
+            .advices {
+                h5 {
+                    color: #555;
+                    margin: 10px 0;
+                }
+                ul {
+                    list-style: disc;
+                    margin-left: 15px;
+                    li {
+                        color: #999;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        .footer-terms{
+            input{
+                display: inline;
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+
+        }
+        .submit {
+            text-align: center;
+            border: none;
+            padding: 10px;
+            background-color: $mainColor;
+            color: #fff;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}

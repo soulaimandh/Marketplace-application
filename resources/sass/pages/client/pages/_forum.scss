@@ -1,0 +1,329 @@
+.forum {
+    padding: 20px 0;
+  
+    .brand-ads {
+      height: 200px;
+      margin-bottom: 20px;
+  
+      .brand-name {
+        margin-top: 45px;
+      }
+    }
+  
+    .page-title {
+      font-weight: bold;
+      color: #000000;
+      font-size: 24px;
+      padding-top: 20px;
+    }
+  
+    .forum-posts .forum-post {
+      padding: 20px 15px;
+      border-radius: 15px;
+      background-color: #fff;
+      overflow: hidden;
+      margin-bottom: 15px;
+  
+      .post-header {
+        .header-left {
+          margin-top: 5px;
+          float: left;
+          position: relative;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+          background-color: $mainColor;
+          text-align: center;
+          font-size: 40px;
+          line-height: 50px;
+          color: #fff;
+          font-weight: bold;
+        }
+  
+        .header-right {
+          float: left;
+          margin: 0 10px;
+  
+          .post-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: #000000;
+            padding-bottom: 5px;
+          }
+  
+          .post-meta {
+            .user {
+              color: $mainColor;
+            }
+  
+            .date-time {
+              color: #999;
+              padding: 0 5px;
+            }
+  
+            .date {
+              margin: 5px;
+            }
+          }
+        }
+      }
+  
+      .post-body {
+        padding: 25px 0;
+        clear: both;
+      }
+  
+      .post-footer {
+        display: flex;
+        justify-content: space-between;
+  
+        .footer-left .phones {
+          border: 1px solid $mainColor !important;
+          padding: 5px 15px;
+          text-align: center;
+          border-radius: 5px;
+        }
+  
+        .footer-right span {
+          color: #999;
+          padding: 5px 10px;
+          font-size: 14px;
+          cursor: pointer;
+  
+          a {
+            color: #999;
+          }
+        }
+      }
+    }
+  
+    .reponses-container {
+      .title {
+        padding: 15px;
+        background-color: rgba(71, 154, 210, 0.2);
+        color: #000000;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+  
+      .reponses-wrapper {
+        padding: 0 0 0 50px;
+      }
+    }
+  
+    .footer-brand {
+      .add-container-btn {
+        text-align: end;
+        overflow: hidden;
+        padding: 15px 0 50px;
+      }
+  
+      a {
+        padding: 10px 40px;
+        color: #fff;
+        background-color: $mainColor;
+        border-radius: 5px;
+        text-align: center;
+      }
+  
+      .brand-ads {
+        height: 80px;
+  
+        .brand-name {
+          margin-top: -15px;
+        }
+      }
+    }
+  
+    form {
+      .form-body {
+        .form-contianer {
+          padding: 10px;
+  
+          .image-input-wrapper {
+            border: 3px dashed $mainColor;
+            background-color: rgba(0, 115, 255, 0.2);
+            border-radius: 10px;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+  
+            .content {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+              cursor: pointer;
+  
+              i {
+                font-size: 30px;
+                color: $mainColor;
+              }
+  
+              .add {
+                color: #fff;
+                background-color: $mainColor;
+                padding: 5px;
+                margin: 5px;
+                font-size: 12px;
+                border-radius: 5px;
+              }
+            }
+  
+            input {
+              position: absolute;
+              top: 0;
+              right: 0;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+            }
+          }
+        }
+  
+        .require-field {
+          font-size: 14px;
+  
+          span {
+            color: red;
+            font-weight: bold;
+  
+            i {
+              font-size: 10px;
+              border-radius: 50%;
+              border: 1px solid red;
+              padding: 1px 4px;
+            }
+          }
+        }
+  
+        label {
+          margin: 5px 0;
+  
+          &.required {
+            position: relative;
+  
+            &::before {
+              content: "*";
+              position: absolute;
+              top: -2px;
+              right: -8px;
+              display: block;
+              color: red;
+              font-weight: bold;
+            }
+          }
+        }
+  
+        .explanation {
+          color: #777;
+          font-size: 12px;
+          padding-top: 30px;
+        }
+  
+        select {
+          color: #777;
+  
+          option {
+            color: #000000;
+          }
+        }
+  
+        input, select, textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #999;
+          outline: none;
+          box-shadow: none;
+          border-radius: 5px;
+          margin-bottom: 15px;
+        }
+  
+        .advices {
+          h5 {
+            color: #555;
+            margin: 10px 0;
+          }
+  
+          ul {
+            list-style: disc;
+            margin-left: 15px;
+  
+            li {
+              color: #999;
+              font-size: 14px;
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+  
+      .footer-terms input {
+        display: inline;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+      }
+  
+      .submit {
+        text-align: center;
+        border: none;
+        padding: 10px 40px;
+        background-color: $mainColor;
+        color: #fff;
+        border-radius: 5px;
+      }
+    }
+  
+    .add-answer-form {
+      display: none;
+  
+      .title {
+        padding: 15px;
+        background-color: rgba(71, 154, 210, 0.2);
+        color: #000000;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .forum .forum-posts .forum-post .post-footer {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .forum .forum-posts .forum-post .post-footer .footer-left {
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .forum .forum-posts .forum-post .post-footer .footer-right span {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+  
+  @media (min-width: 767px) {
+    .forum form .form-body .form-contianer .image-input-wrapper {
+      width: 260px;
+      height: 260px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .forum form .form-body .explanation {
+      padding: 0 0 10px;
+    }
+  }
